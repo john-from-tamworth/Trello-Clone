@@ -9,11 +9,11 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-function Card() {
+function Card({ card }) {
   const classes = useStyle();
   return (
     <div>
-      <Paper className={classes.card}>Item 1</Paper>
+      <Paper className={classes.card}>{card.content}</Paper>
     </div>
   );
 }
