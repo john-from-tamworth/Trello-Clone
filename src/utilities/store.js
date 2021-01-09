@@ -1,17 +1,17 @@
 const cards = [
   {
     id: 'card-1',
-    content: 'Read next chapter in current book',
+    title: 'Read next chapter in current book',
   },
 
   {
     id: 'card-2',
-    content: 'Go shopping',
+    title: 'Go shopping',
   },
 
   {
     id: 'card-3',
-    content: 'Prep Dinner',
+    title: 'Prep Dinner',
   },
 ];
 

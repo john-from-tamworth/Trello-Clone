@@ -17,13 +17,13 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-function InputContainer() {
+function InputContainer({ listId }) {
   const classes = useStyle();
   const [open, setOpen] = useState(false);
   return (
     <div className={classes.root}>
       <Collapse in={open}>
-        <InputItem setOpen={setOpen} />
+        <InputItem setOpen={setOpen} listId={listId} />
       </Collapse>
       <Collapse in={!open}>
         <Paper
