@@ -1,3 +1,16 @@
+A Trello / Kanban Board style app, created in React and styled with Material UI.  I used React Beautiful DND for the drag and drop functionality.
+
+Click [here](https://master.d1xjf6c288fwed.amplifyapp.com/) to open the app, hosted on AWS.
+
+Users can;
+* Create new lists
+* Add new items to lists
+* Drag and drop items to other lists
+* Change the name of the lists
+
+This was my first experience of pair programming.  I learned a lot about communication and had fun in the process.  The code can do with some cleaning up which I plan to do at some point! 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
