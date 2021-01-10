@@ -34,7 +34,15 @@ function InputItem({ setOpen, listId }) {
 
   const handleConfirmBtn = () => {
     addCard(cardTitle, listId);
+    //ensure card title is cleared when submitted
+    setCardTitle('');
     setOpen(false);
+  };
+
+  //clears card if user clicks away from, onBlur
+  const handleBlur = () => {
+    setOpen(false);
+    setCardTitle('');
   };
 
   return (
@@ -43,7 +51,7 @@ function InputItem({ setOpen, listId }) {
         <Paper className={classes.item}>
           <InputBase
             onChange={handleOnChange}
-            onBlur={() => setOpen(false)}
+            onBlur={handleBlur}
             multiline
             fullWidth
             inputProps={{ className: classes.input }}
