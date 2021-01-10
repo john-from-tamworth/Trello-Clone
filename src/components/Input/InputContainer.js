@@ -5,7 +5,8 @@ import InputItem from './InputItem';
 
 const useStyle = makeStyles((theme) => ({
   root: {
-    marginTop: theme.spacing(3),
+    width: '300px',
+    marginTop: theme.spacing(1),
   },
   addItem: {
     padding: theme.spacing(1, 1, 1, 2),
@@ -17,13 +18,13 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-function InputContainer({ listId }) {
+function InputContainer({ listId, type }) {
   const classes = useStyle();
   const [open, setOpen] = useState(false);
   return (
     <div className={classes.root}>
       <Collapse in={open}>
-        <InputItem setOpen={setOpen} listId={listId} />
+        <InputItem setOpen={setOpen} listId={listId} type={type} />
       </Collapse>
       <Collapse in={!open}>
         <Paper
@@ -31,7 +32,9 @@ function InputContainer({ listId }) {
           elevation={0}
           onClick={() => setOpen(!open)}
         >
-          <Typography>+ Add an Item</Typography>
+          <Typography>
+            {type === 'card' ? '+ Add an Item' : '+ Add another List'}{' '}
+          </Typography>
         </Paper>
       </Collapse>
     </div>
